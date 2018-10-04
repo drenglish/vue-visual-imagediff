@@ -1,0 +1,64 @@
+{
+  "name": "vue-visual-imagediff",
+  "version": "0.0.1",
+  "description": "A responsive side-by-side image compare component for Vue.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Michael Dietz",
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": ">= 2.6.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "@vue/test-utils": "^1.0.0-beta.30",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.0.1",
+    "jest": "^24.9.0",
+    "node-sass": "^4.13.0",
+    "vue": "^2.6.11",
+    "vue-jest": "^4.0.0-beta.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "babel": {
+    "plugins": [
+      "@babel/plugin-transform-modules-commonjs"
+    ],
+    "env": {
+      "test": {
+        "presets": [
+          [
+            "@babel/preset-env",
+            {
+              "modules": "cjs",
+              "targets": {
+                "node": true
+              }
+            }
+          ]
+        ]
+      }
+    }
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "mjs",
+      "vue"
+    ],
+    "testMatch": [
+      "**/__tests__/**/*.?(m)js?(x)",
+      "**/?(*.)(spec|test).?(m)js?(x)"
+    ],
+    "transform": {
+      ".*\\.(vue)$": "vue-jest",
+      "^.+\\.m?js$": "babel-jest"
+    }
+  }
+}
